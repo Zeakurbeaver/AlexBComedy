@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALEXANDER BROTHERTON — Comedian</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&family=Oswald:wght@700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-logo">ALEX B</div>
+    <ul class="nav-links">
+      <li><button class="nav-btn active" data-section="home">HOME</button></li>
+      <li><button class="nav-btn"        data-section="tour">TOUR</button></li>
+      <li><button class="nav-btn"        data-section="contact">CONTACT</button></li>
+    </ul>
+  </nav>
+
+  <!-- ==================== HOME ==================== -->
+  <section id="home" class="section active">
+
+    <!-- HERO IMAGE — sticky, stays visible while text + content scroll over it -->
+    <div class="hero-image-sticky">
+      <img class="hero-sticky-svg" src="assets/images/Header-image.svg" alt="" aria-hidden="true" />
+    </div>
+
+    <!-- HERO TEXT — overlaid on image, scrolls away at normal speed -->
+    <div class="hero-text-layer">
+      <div class="hero-content">
+        <h1 class="hero-name">ALEXANDER<br>BROTHERTON</h1>
+        <p class="hero-tag">Stand-up Comedian</p>
+        <button class="tape-btn hero-cta nav-btn" data-section="contact">BOOK NOW</button>
+      </div>
+    </div>
+
+    <!-- ALL SCROLLABLE CONTENT — yellow background slides over the sticky image -->
+    <div class="home-scroll-content">
+
+      <!-- ROW: BIO + headshot oval -->
+      <div class="media-row">
+        <div class="media-text reveal">
+          <div class="card card-bio tilt-left">
+            <h2 class="card-heading">BIO</h2>
+            <p>A comedian who thinks claps are cheap, Alexander goes for laughs. All bits are meticulously written, worked, reworked, and revised. Performances are flexible and conversational, keeping audiences fully engrossed between punchlines.</p>
+            <p>Confident in commanding a room with playful quick wit, Alexander is unafraid to calmly and comedically de-escalate any heckling incidents. Distractions become tools, not obstacles, as Alexander keeps the entire audience locked in.</p>
+            <p>Whether delivering one-liners, wordplay, deadpan, or fabricated anecdotes, Alexander brings sharp, thoughtful comedy without pandering.</p>
+          </div>
+        </div>
+        <div class="media-photo reveal">
+          <div class="photo-loose">
+            <img src="assets/images/Headshotbgremoved.png" alt="Alexander Brotherton" />
+          </div>
+        </div>
+      </div>
+
+      <div class="tape-divider reveal-strip">
+        <span>★ STAND-UP ★ CROWD WORK ★ DEADPAN ★ WORDPLAY ★ SHARP WIT ★ </span>
+      </div>
+
+      <!-- ROW 1: video left, photo right -->
+      <div class="media-row">
+        <div class="media-video reveal">
+          <div class="card tilt-left" style="padding:14px 14px 20px;">
+            <div class="video-container">
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/0aYBhslPbgk?autoplay=1&mute=1&controls=0&enablejsapi=1&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3"
+                  title="Quick Clip"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+                <div class="video-overlay"></div>
+              </div>
+              <button class="mute-btn" data-muted="true" aria-label="Unmute">UNMUTE</button>
+            </div>
+            <p class="clip-label">Quick Clip</p>
+          </div>
+        </div>
+        <div class="media-photo reveal">
+          <div class="photo-loose">
+            <img src="assets/images/Headshotbgremoved2.png" alt="Alex B live" />
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 2: photo left, video right -->
+      <div class="media-row media-flip">
+        <div class="media-photo reveal">
+          <div class="photo-loose">
+            <img src="assets/images/Headshotbgremoved3.png" alt="Alex B" />
+          </div>
+        </div>
+        <div class="media-video reveal">
+          <div class="card tilt-right" style="padding:14px 14px 20px;">
+            <div class="video-container">
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/LTEXrLNSxQU?autoplay=1&mute=1&controls=0&enablejsapi=1&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3"
+                  title="5 Min Set — The Bird Comedy Club"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+                <div class="video-overlay"></div>
+              </div>
+              <button class="mute-btn" data-muted="true" aria-label="Unmute">UNMUTE</button>
+            </div>
+            <p class="clip-label">5 Min Set — The Bird Comedy Club</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tape-divider tape-dark reveal-strip">
+        <span>★ NDA COMEDY ★ TOPCITY ★ PURE CHAOS ★ UNCLOSETED PRODUCTIONS ★ CABARET ARTS ★ BIG NICK'S ★ </span>
+      </div>
+
+      <!-- ROW 3: video left, photo right -->
+      <div class="media-row">
+        <div class="media-video reveal">
+          <div class="card tilt-slight" style="padding:14px 14px 20px;">
+            <div class="video-container">
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/wPBBwA3oJr8?autoplay=1&mute=1&controls=0&enablejsapi=1&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3"
+                  title="5 Min Set — Lawrence KS Comedy Club"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+                <div class="video-overlay"></div>
+              </div>
+              <button class="mute-btn" data-muted="true" aria-label="Unmute">UNMUTE</button>
+            </div>
+            <p class="clip-label">5 Min Set — Lawrence KS Comedy Club</p>
+          </div>
+        </div>
+        <div class="media-photo reveal">
+          <div class="photo-loose">
+            <img src="assets/images/leta9860removed.png" alt="Alex B" />
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 4: photo left, video right -->
+      <div class="media-row media-flip">
+        <div class="media-photo reveal">
+          <div class="photo-loose">
+            <img src="assets/images/Headshotbgremoved.png" alt="Alex B" />
+          </div>
+        </div>
+        <div class="media-video reveal">
+          <div class="card tilt-left" style="padding:14px 14px 20px;">
+            <div class="video-container">
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/5AfEonLgGOE?autoplay=1&mute=1&controls=0&enablejsapi=1&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3"
+                  title="TopCity Comedy Competition"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+                <div class="video-overlay"></div>
+              </div>
+              <button class="mute-btn" data-muted="true" aria-label="Unmute">UNMUTE</button>
+            </div>
+            <p class="clip-label">TopCity Comedy Competition — 1st Place</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CREDITS -->
+      <div class="content-row row-credits-full">
+        <div class="card card-credits tilt-left reveal">
+          <h2 class="card-heading">CREDITS</h2>
+          <div class="credits-grid">
+            <div class="credits-block">
+              <p class="credit-cat">Sets</p>
+              <p>Up to 30 minute sets</p>
+              <p>Clean Comedy Set Available</p>
+            </div>
+            <div class="credits-block">
+              <p class="credit-cat">Contest Wins</p>
+              <p>1st — NDA Comedy Gong Show</p>
+              <p>1st — TopCity Comedy Contest</p>
+            </div>
+            <div class="credits-block">
+              <p class="credit-cat">Bookings</p>
+              <p>Pure Chaos</p>
+              <p>Uncloseted Productions</p>
+              <p>NDA Comedy</p>
+              <p>TopCity Comedy</p>
+              <p>Cabaret Arts &amp; Social Theatre</p>
+            </div>
+            <div class="credits-block">
+              <p class="credit-cat">Host Experience</p>
+              <p>NDA Comedy Open Mic</p>
+              <p>Big Nick Comedy Bar Shows</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUOTE BAND -->
+      <div class="quote-band reveal-strip">
+        <div class="quote-inner">
+          <blockquote class="pull-quote reveal">
+            <p>"Sharp, confident comedy that keeps the whole room locked in."</p>
+            <cite>— Booker, NDA Comedy</cite>
+          </blockquote>
+        </div>
+      </div>
+
+    </div><!-- /home-scroll-content -->
+
+  </section>
+
+  <!-- ==================== TOUR ==================== -->
+  <section id="tour" class="section">
+    <div class="tour-header">
+      <h1 class="page-title">TOUR DATES</h1>
+      <p class="page-sub">Catch Alex live — new dates added regularly.</p>
+    </div>
+    <div class="tour-board" id="tour-list"></div>
+    <div class="tour-footer-note reveal">
+      <div class="card tilt-left" style="display:inline-block; padding:20px 32px;">
+        <p style="font-family:'Permanent Marker',cursive; font-size:1rem;">More dates dropping soon — follow for updates!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section id="contact" class="section">
+    <div class="contact-header">
+      <h1 class="page-title">CONTACTS</h1>
+      <p class="page-sub">Bookings, press, collabs — let's talk.</p>
+    </div>
+    <div class="contact-collage">
+
+      <div class="card card-contact tilt-right reveal">
+        <h2 class="card-heading">BOOKING</h2>
+        <p>For bookings, press kits, and general inquiries:</p>
+        <a href="mailto:alexjbrotherton@gmail.com" class="contact-email">alexjbrotherton@gmail.com</a>
+      </div>
+
+      <div class="card card-socials tilt-left reveal">
+        <h2 class="card-heading">FIND ME</h2>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/alexander_brotherton/" target="_blank" rel="noopener" class="social-icon-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.tiktok.com/@alexander.brotherton" target="_blank" rel="noopener" class="social-icon-link" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.72a8.17 8.17 0 0 0 4.78 1.52V6.79a4.85 4.85 0 0 1-1.01-.1z"/></svg>
+            <span>TikTok</span>
+          </a>
+          <a href="mailto:alexjbrotherton@gmail.com" class="social-icon-link" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+            <span>Email</span>
+          </a>
+        </div>
+        <p class="social-handle">@alexander_brotherton</p>
+      </div>
+
+      <div class="card card-form tilt-slight reveal">
+        <h2 class="card-heading">SAY HI</h2>
+        <form class="contact-form" id="contact-form">
+          <input type="text"  name="name"    placeholder="Your name"    required />
+          <input type="email" name="email"   placeholder="Your email"   required />
+          <textarea           name="message" placeholder="Your message" rows="4" required></textarea>
+          <button type="submit" class="tape-btn">SEND IT</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer id="site-footer">
+    <div class="footer-main">
+      <div class="footer-col footer-brand">
+        <p class="footer-name">ALEXANDER<br>BROTHERTON</p>
+        <p class="footer-title-line">Stand-up Comedian</p>
+        <a href="mailto:alexjbrotherton@gmail.com" class="footer-email">alexjbrotherton@gmail.com</a>
+      </div>
+      <div class="footer-col footer-nav">
+        <p class="footer-heading">NAVIGATE</p>
+        <ul>
+          <li><button class="footer-nav-btn nav-btn" data-section="home">Home</button></li>
+          <li><button class="footer-nav-btn nav-btn" data-section="tour">Tour</button></li>
+          <li><button class="footer-nav-btn nav-btn" data-section="contact">Contact</button></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-connect">
+        <p class="footer-heading">CONNECT</p>
+        <ul>
+          <li><a href="https://www.instagram.com/alexander_brotherton/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@alexander.brotherton" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="mailto:alexjbrotherton@gmail.com">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-book">
+        <p class="footer-heading">BOOKING</p>
+        <p>Available for clubs, festivals, corporates, and private events.</p>
+        <a href="mailto:alexjbrotherton@gmail.com" class="tape-btn footer-book-btn">BOOK ALEX</a>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <p class="footer-copy">© 2025 Alexander Brotherton. All rights reserved.</p>
+      <p class="footer-credit">Site by <a href="#" target="_blank" rel="noopener">OBVS Marketing</a></p>
+    </div>
+  </footer>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script src="js/tour.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
