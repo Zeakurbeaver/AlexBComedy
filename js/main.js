@@ -25,15 +25,13 @@ allNavBtns.forEach((btn) => {
 });
 
 // =============================================
-// MARQUEE
+// MARQUEE — build DOM
 // =============================================
 document.querySelectorAll(".tape-divider").forEach((divider) => {
   const span = divider.querySelector("span");
   if (!span) return;
   const track = document.createElement("div");
   track.className = "tape-track";
-  // 20 identical copies — total width >> any viewport, loop translates by
-  // exactly 1/20 of track width (= one copy), so seam is never visible
   for (let i = 0; i < 20; i++) {
     const s = span.cloneNode(true);
     if (i > 0) s.setAttribute("aria-hidden", "true");
@@ -41,6 +39,16 @@ document.querySelectorAll(".tape-divider").forEach((divider) => {
   }
   divider.innerHTML = "";
   divider.appendChild(track);
+});
+
+// MARQUEE — GSAP animation (waits for fonts so measurement is accurate)
+document.fonts.ready.then(() => {
+  document.querySelectorAll(".tape-track").forEach((track) => {
+    const span = track.querySelector("span");
+    if (!span) return;
+    const w = span.getBoundingClientRect().width;
+    gsap.to(track, { x: -w, duration: 22, ease: "none", repeat: -1 });
+  });
 });
 
 // =============================================

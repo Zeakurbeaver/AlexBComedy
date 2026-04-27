@@ -13,7 +13,7 @@
   --ease:     cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-html { scroll-behavior: auto; }
+html { scroll-behavior: auto; overflow-x: hidden; }
 
 body {
   background: var(--yellow);
@@ -327,7 +327,7 @@ ul  { list-style: none; }
 .tape-track {
   display: flex;
   width: max-content;
-  animation: marquee 26s linear infinite;
+  /* animation driven by GSAP in main.js for pixel-accurate looping */
 }
 .tape-divider span {
   display: block;
@@ -340,10 +340,6 @@ ul  { list-style: none; }
 }
 .tape-dark span { color: var(--yellow); }
 
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(calc(-100% / 20)); }
-}
 
 /* =============================================
    CARDS
@@ -842,8 +838,8 @@ ul  { list-style: none; }
   .nav-links { gap: 4px; }
   .nav-btn { font-size: 0.95rem; padding: 5px 12px; }
 
-  .hero-image-sticky { height: 58vh; min-height: 360px; }
-  .hero-text-layer   { margin-top: -58vh; height: 58vh; min-height: 360px; }
+  .hero-image-sticky { height: 70vh; min-height: 420px; }
+  .hero-text-layer   { margin-top: -70vh; height: 70vh; min-height: 420px; }
   .hero-sticky-svg   { object-position: center center; }
   .hero-content      { padding: 0 20px 48px; }
 
@@ -863,14 +859,6 @@ ul  { list-style: none; }
   .row-bio,
   .row-credits { grid-template-columns: 1fr; }
 
-  .shorts-grid { grid-template-columns: 1fr; max-width: 320px; }
-
-  .scatter-row { padding: 8px 20px 24px; }
-  .scatter-row .polaroid { max-width: 200px; }
-  .scatter-row .float-photo { max-width: 200px; }
-
-  .carousel-section { padding: 0 20px 20px; }
-
   .quote-inner { flex-direction: column; gap: 32px; }
   .quote-band { padding: 56px 20px; }
 
@@ -886,6 +874,53 @@ ul  { list-style: none; }
   .footer-bar { padding: 16px 20px; flex-direction: column; align-items: flex-start; gap: 6px; }
 }
 
+/* ---- Phone (iPhone 13 Pro and similar, ≤480px) ---- */
 @media (max-width: 480px) {
-  .footer-main { grid-template-columns: 1fr; }
+  /* Nav — tighter on small screens */
+  .nav-logo { font-size: 1.4rem; }
+  .nav-btn  { font-size: 0.82rem; padding: 4px 9px; letter-spacing: 0.08em; }
+
+  /* Hero — taller, fills the screen, covers instead of fitting */
+  .hero-image-sticky { height: 80vh; min-height: 500px; }
+  .hero-text-layer   { margin-top: -80vh; height: 80vh; min-height: 500px; }
+  .hero-sticky-svg   { object-fit: cover; object-position: center top; }
+  .hero-name         { font-size: clamp(2.4rem, 11vw, 3.5rem); }
+  .hero-content      { padding: 0 16px 36px; }
+
+  /* Media rows — less padding on phone */
+  .media-row,
+  .media-row.media-flip { padding: 32px 16px; gap: 20px; }
+
+  /* Photos — remove horizontal bleed (causes overflow on narrow screens) */
+  .media-row:not(.media-flip) .media-photo .photo-loose,
+  .media-flip .media-photo .photo-loose {
+    transform: rotate(1.8deg);
+    margin: 0 auto;
+    max-width: 82%;
+  }
+  .media-flip .media-photo .photo-loose { transform: rotate(-1.8deg); }
+
+  /* Credits — single column */
+  .credits-grid    { grid-template-columns: 1fr; }
+  .row-credits-full { padding: 28px 16px; }
+
+  /* Tape dividers */
+  .tape-divider { margin: 16px 0; }
+
+  /* Quote band */
+  .quote-band { padding: 44px 16px; }
+
+  /* Tour */
+  .tour-item        { grid-template-columns: 85px 1fr; padding: 14px 14px; gap: 10px; }
+  .tour-header,
+  .contact-header   { padding: 28px 16px 10px; }
+  .tour-board       { padding: 0 16px 36px; }
+  .tour-footer-note { padding: 0 16px 48px; }
+
+  /* Contact */
+  .contact-collage { padding: 16px 16px 48px; }
+
+  /* Footer */
+  .footer-main { grid-template-columns: 1fr; padding: 28px 16px 24px; gap: 22px; }
+  .footer-bar  { padding: 14px 16px; }
 }
